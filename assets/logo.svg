@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Takshashila AI Team emblem">
+  <!-- Simplified placeholder emblem in Takshashila brand orange.
+       Replace this file with the official university logo (logo.png / logo.svg)
+       and update the <img> paths in index.html if the filename changes. -->
+  <g fill="none" stroke="#e85c29" stroke-width="4">
+    <circle cx="60" cy="60" r="54"/>
+    <circle cx="60" cy="60" r="46" stroke-width="2"/>
+  </g>
+  <g fill="#e85c29">
+    <!-- central pillar / flame motif -->
+    <path d="M60 26c-4 8-10 12-10 20a10 10 0 0 0 20 0c0-8-6-12-10-20z"/>
+    <rect x="56" y="56" width="8" height="26" rx="2"/>
+    <!-- side pillars -->
+    <rect x="38" y="48" width="6" height="34" rx="2"/>
+    <rect x="76" y="48" width="6" height="34" rx="2"/>
+    <!-- capitals -->
+    <rect x="35" y="44" width="12" height="5" rx="2"/>
+    <rect x="73" y="44" width="12" height="5" rx="2"/>
+    <!-- base -->
+    <rect x="32" y="84" width="56" height="5" rx="2"/>
+    <rect x="36" y="91" width="48" height="4" rx="2"/>
+  </g>
+</svg>
