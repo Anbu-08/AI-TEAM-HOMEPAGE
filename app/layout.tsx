@@ -14,11 +14,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.productName} — ${site.tagline} | ${site.developer}`,
-    template: `%s | ${site.productName}`,
+    default: site.productName,
+    template: site.productName,
   },
   description:
-    "Personal Assistant is an AI-powered Gmail productivity assistant that helps you organize emails, generate AI summaries, draft replies, search your inbox, and receive daily briefings — built by Takshashila AI Team.",
+    "Personal Assistant is an AI-powered Gmail productivity assistant that helps you organize emails, generate AI summaries, draft replies, search your inbox, and receive daily briefings - built by Takshashila AI Team.",
   applicationName: site.productName,
   keywords: [
     "Personal Assistant",
@@ -40,14 +40,14 @@ export const metadata: Metadata = {
     type: "website",
     url: site.url,
     siteName: site.productName,
-    title: `${site.productName} — ${site.tagline}`,
+    title: site.productName,
     description:
       "An AI-powered Gmail productivity assistant that helps you manage your inbox more efficiently using secure Google authentication.",
     locale: "en_US",
   },
   twitter: {
     card: "summary",
-    title: `${site.productName} — ${site.tagline}`,
+    title: site.productName,
     description:
       "An AI-powered Gmail productivity assistant that helps you manage your inbox more efficiently using secure Google authentication.",
   },
