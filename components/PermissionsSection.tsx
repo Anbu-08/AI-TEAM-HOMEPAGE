@@ -1,20 +1,11 @@
-import { Eye, FolderKanban, PenSquare, CircleCheck } from "lucide-react";
+import { FolderKanban, CircleCheck } from "lucide-react";
 
 const scopes = [
   {
-    icon: Eye,
-    scope: "gmail.readonly",
-    description: "Used to summarize emails.",
-  },
-  {
     icon: FolderKanban,
     scope: "gmail.modify",
-    description: "Used to organize inbox content.",
-  },
-  {
-    icon: PenSquare,
-    scope: "gmail.compose",
-    description: "Used to create draft replies.",
+    description:
+      "Used to read emails for summaries, organize inbox content, and create draft replies — never to send or delete email.",
   },
 ];
 
@@ -32,12 +23,12 @@ export default function PermissionsSection() {
             Why Gmail Permissions Are Needed
           </h2>
           <p className="mt-4 text-base text-foreground/60">
-            Personal Assistant requests only the specific Gmail scopes required to power its
+            Personal Assistant requests only the single Gmail scope required to power its
             features — nothing more.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-3">
+        <div className="mx-auto mt-12 grid max-w-md gap-6">
           {scopes.map(({ icon: Icon, scope, description }) => (
             <div key={scope} className="rounded-2xl border border-surface-border bg-background p-6">
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50 text-brand-600">

@@ -13,14 +13,16 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-surface-border/80 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
         <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <Image src="/logo.svg" alt="Takshashila AI Team logo" width={40} height={40} className="h-10 w-10" />
-          <span className="flex flex-col leading-tight">
-            <span className="text-base font-bold tracking-tight text-foreground sm:text-lg">
-              {site.productName}
-            </span>
-            <span className="text-[11px] font-medium uppercase tracking-wide text-foreground/50">
-              by {site.developer}
-            </span>
+          <Image
+            src="/takshashila-university-logo.png"
+            alt="Takshashila University logo"
+            width={500}
+            height={148}
+            priority
+            className="h-9 w-auto sm:h-10"
+          />
+          <span className="border-l border-surface-border pl-3 text-base font-bold tracking-tight text-foreground sm:text-lg">
+            {site.productName}
           </span>
         </Link>
 

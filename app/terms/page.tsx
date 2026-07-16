@@ -44,8 +44,9 @@ export default function TermsOfServicePage() {
         <h2 className={h2}>3. Google Account &amp; Gmail Access</h2>
         <p className={p}>
           Use of the Application requires you to authenticate with your Google Account and grant
-          specific Gmail permissions (<code>gmail.readonly</code>, <code>gmail.modify</code>,{" "}
-          <code>gmail.compose</code>) via Google&apos;s official OAuth consent screen. You may
+          the Gmail permission (<code>gmail.modify</code>) via Google&apos;s official OAuth
+          consent screen. This permission is used to read emails for summaries, organize inbox
+          content, and create draft replies — never to send or delete email. You may
           review, limit, or revoke this access at any time from your{" "}
           <a
             href="https://myaccount.google.com/permissions"

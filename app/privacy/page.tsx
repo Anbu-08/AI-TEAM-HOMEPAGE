@@ -37,13 +37,14 @@ export default function PrivacyPolicyPage() {
         <h2 className={h2}>2. Information We Access</h2>
         <p className={p}>
           When you sign in with Google and grant permission, {site.productName} may access the
-          following Gmail scopes, and only after you explicitly consent through Google&apos;s
+          following Gmail scope, and only after you explicitly consent through Google&apos;s
           OAuth consent screen:
         </p>
         <ul className={ul}>
-          <li><code>gmail.readonly</code> — to read email content in order to generate summaries.</li>
-          <li><code>gmail.modify</code> — to organize, label, and categorize inbox content.</li>
-          <li><code>gmail.compose</code> — to create draft replies for your review.</li>
+          <li>
+            <code>gmail.modify</code> — used to read emails for summaries, organize inbox
+            content, and create draft replies — never to send or delete email.
+          </li>
         </ul>
         <p className={p}>
           We also access basic Google profile information (name, email address, profile

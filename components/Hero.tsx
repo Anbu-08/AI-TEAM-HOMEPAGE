@@ -9,7 +9,7 @@ export default function Hero() {
         <div>
           <div className="inline-flex items-center gap-2 rounded-full border border-surface-border bg-surface px-3.5 py-1.5 text-xs font-semibold text-foreground/70">
             <ShieldCheck size={14} className="text-emerald-500" />
-            Verified Google OAuth application
+            Uses secure Google Sign-In
           </div>
 
           <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-[3.25rem] lg:leading-[1.08]">

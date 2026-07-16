@@ -66,7 +66,7 @@ export default function InboxIllustration() {
 
       <div className="absolute -right-4 -top-5 flex items-center gap-1.5 rounded-full border border-surface-border bg-background px-3 py-2 text-xs font-semibold text-foreground shadow-lg sm:-right-8">
         <ShieldCheck size={14} className="text-emerald-500" />
-        Secured by Google OAuth
+        Secure Google Sign-In
       </div>
 
       <div className="absolute -bottom-5 -left-4 flex items-center gap-1.5 rounded-full border border-surface-border bg-background px-3 py-2 text-xs font-semibold text-foreground shadow-lg sm:-left-8">

@@ -11,11 +11,16 @@ export default function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-[2fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-3">
-            <Image src="/logo.svg" alt="Takshashila AI Team logo" width={36} height={36} className="h-9 w-9" />
-            <div className="flex flex-col leading-tight">
-              <span className="text-sm font-bold text-foreground">{site.productName}</span>
-              <span className="text-xs text-foreground/50">by {site.developer}</span>
-            </div>
+            <Image
+              src="/takshashila-university-logo.png"
+              alt="Takshashila University logo"
+              width={500}
+              height={148}
+              className="h-9 w-auto"
+            />
+            <span className="border-l border-surface-border pl-3 text-sm font-bold text-foreground">
+              {site.productName}
+            </span>
           </div>
           <p className="mt-4 max-w-sm text-sm text-foreground/60">
             {site.tagline}. Developed and maintained by {site.developer} — a research and
