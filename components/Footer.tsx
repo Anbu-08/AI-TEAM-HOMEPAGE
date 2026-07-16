@@ -1,0 +1,59 @@
+import Image from "next/image";
+import Link from "next/link";
+import { Mail, Globe } from "lucide-react";
+import { site } from "@/lib/site";
+
+export default function Footer() {
+  const year = new Date().getFullYear();
+
+  return (
+    <footer className="border-t border-surface-border bg-surface">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-[2fr_1fr_1fr]">
+        <div>
+          <div className="flex items-center gap-3">
+            <Image src="/logo.svg" alt="Takshashila AI Team logo" width={36} height={36} className="h-9 w-9" />
+            <div className="flex flex-col leading-tight">
+              <span className="text-sm font-bold text-foreground">{site.productName}</span>
+              <span className="text-xs text-foreground/50">by {site.developer}</span>
+            </div>
+          </div>
+          <p className="mt-4 max-w-sm text-sm text-foreground/60">
+            {site.tagline}. Developed and maintained by {site.developer} — a research and
+            engineering initiative building AI-powered productivity tools.
+          </p>
+        </div>
+
+        <div>
+          <h4 className="text-sm font-semibold text-foreground">Legal</h4>
+          <ul className="mt-4 space-y-2.5 text-sm">
+            <li><Link href="/privacy" className="text-foreground/60 hover:text-brand-600">Privacy Policy</Link></li>
+            <li><Link href="/terms" className="text-foreground/60 hover:text-brand-600">Terms of Service</Link></li>
+            <li><Link href="/#contact" className="text-foreground/60 hover:text-brand-600">Contact</Link></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="text-sm font-semibold text-foreground">Contact</h4>
+          <ul className="mt-4 space-y-2.5 text-sm">
+            <li>
+              <a href={`mailto:${site.supportEmail}`} className="flex items-center gap-2 text-foreground/60 hover:text-brand-600">
+                <Mail size={15} /> {site.supportEmail}
+              </a>
+            </li>
+            <li>
+              <a href={site.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-foreground/60 hover:text-brand-600">
+                <Globe size={15} /> {site.url.replace("https://", "")}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-surface-border px-5 py-6 sm:px-8">
+        <p className="text-center text-xs text-foreground/50">
+          © {year} {site.developer}. {site.productName} is developed by {site.developer}.
+        </p>
+      </div>
+    </footer>
+  );
+}

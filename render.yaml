@@ -1,9 +1,9 @@
 services:
   - type: web
-    name: takshashila-ai-team
+    name: personal-assistant-homepage
     runtime: static
-    staticPublishPath: .
-    buildCommand: ""
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./out
     headers:
       - path: /*
         name: X-Frame-Options

@@ -1,50 +1,62 @@
-# Takshashila AI Team — Homepage
+# Personal Assistant — Homepage
 
-Official homepage of the **Takshashila AI Team** at Takshashila University.
-A fully static site (HTML + CSS + JS) styled with the university's brand
-colors (orange `#e85c29`, indigo `#2e3169`) — no build step required.
+Official homepage for **Personal Assistant**, an AI-powered Gmail productivity assistant
+developed by **Takshashila AI Team**. This site is the public-facing homepage referenced by
+Personal Assistant's Google OAuth consent screen and app verification review — it explains
+what the app is, what it does, why it requests Gmail access, and how user data is handled.
+
+Built with **Next.js (App Router) + TypeScript + Tailwind CSS v4**, statically exported (no
+server required).
 
 ## Project structure
 
 ```
-index.html      – page content (edit team names, projects, stats here)
-styles.css      – all styling and brand colors
-script.js       – mobile menu toggle
-assets/logo.svg – placeholder emblem (replace with the official logo)
-render.yaml     – Render static-site configuration
+app/
+  layout.tsx        – root layout, global SEO metadata, Navbar/Footer wrapper
+  page.tsx           – homepage (Hero, Features, How It Works, Privacy, Permissions, About, Contact)
+  privacy/page.tsx    – full Privacy Policy
+  terms/page.tsx      – full Terms of Service
+  robots.ts / sitemap.ts
+  globals.css         – Tailwind + brand design tokens
+components/           – Navbar, Footer, Hero, Features, HowItWorks, PrivacySection,
+                          PermissionsSection, AboutSection, ContactSection, InboxIllustration
+lib/site.ts            – shared site content/config (name, tagline, contact, nav links)
+public/logo.svg         – Takshashila AI Team logo
+render.yaml             – Render static-site build configuration
 ```
 
 ## Run locally
 
-Just open `index.html` in a browser, or serve it:
+```
+npm install
+npm run dev
+```
+
+Open http://localhost:3000.
+
+## Build
 
 ```
-python -m http.server 8000
+npm run build
 ```
+
+This produces a static export in `out/` (configured via `output: "export"` in
+`next.config.ts`) — no Node server needed in production.
 
 ## Deploy on Render
 
-1. Push this folder to a GitHub repository:
-   ```
-   git init
-   git add .
-   git commit -m "Takshashila AI Team homepage"
-   git branch -M main
-   git remote add origin https://github.com/<your-username>/takshashila-ai-team.git
-   git push -u origin main
-   ```
-2. Go to [dashboard.render.com](https://dashboard.render.com) → **New → Static Site**.
-3. Connect the GitHub repository. Render reads `render.yaml` automatically —
-   leave *Build Command* empty and *Publish Directory* as `.` if asked.
-4. Click **Create Static Site**. The page goes live at
-   `https://takshashila-ai-team.onrender.com` (rename the service to change the URL).
+`render.yaml` is already configured for a static deploy:
 
-Every `git push` to `main` redeploys automatically.
+- **Build command:** `npm ci && npm run build`
+- **Publish directory:** `./out`
 
-## Customising
+Push to the connected GitHub repository and Render will build and deploy automatically.
 
-- **Logo** — replace `assets/logo.svg` with the official university logo.
-- **Hero photo** — add `assets/hero.jpg` and swap the `background` rule in
-  `styles.css` (a commented example is provided in the `.hero` rule).
-- **Team members** — edit the `#team` section in `index.html`.
-- **Contact email** — search for `aiteam@takshashilauniv.ac.in` and replace.
+## Before going live
+
+- [ ] Set `signInUrl` in `lib/site.ts` to the live "Sign in with Google" / OAuth start URL once
+      the Personal Assistant application is deployed.
+- [ ] Confirm `site.url` in `lib/site.ts` matches the domain registered on the Google OAuth
+      consent screen (currently `https://takshashilaai.tech`).
+- [ ] Verify the Privacy Policy (`/privacy`) and Terms of Service (`/terms`) URLs match exactly
+      what is entered in the Google Cloud Console OAuth consent screen configuration.
