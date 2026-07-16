@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   creator: site.developer,
   publisher: site.developer,
   icons: {
-    icon: "/logo.svg",
-    shortcut: "/logo.svg",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
   },
   openGraph: {
     type: "website",
