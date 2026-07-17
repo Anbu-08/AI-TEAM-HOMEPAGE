@@ -29,16 +29,17 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-sm font-semibold text-foreground">Legal</h4>
+          <h4 className="text-sm font-semibold text-foreground">Links</h4>
           <ul className="mt-4 space-y-2.5 text-sm">
             <li><Link href="/privacy" className="text-foreground/60 hover:text-brand-600">Privacy Policy</Link></li>
             <li><Link href="/terms" className="text-foreground/60 hover:text-brand-600">Terms of Service</Link></li>
-            <li><Link href="/#contact" className="text-foreground/60 hover:text-brand-600">Contact</Link></li>
+            <li><Link href="/data-deletion" className="text-foreground/60 hover:text-brand-600">Data Deletion</Link></li>
+            <li><a href={`mailto:${site.supportEmail}`} className="text-foreground/60 hover:text-brand-600">Support</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 className="text-sm font-semibold text-foreground">Contact</h4>
+          <h4 className="text-sm font-semibold text-foreground">Support</h4>
           <ul className="mt-4 space-y-2.5 text-sm">
             <li>
               <a href={`mailto:${site.supportEmail}`} className="flex items-center gap-2 text-foreground/60 hover:text-brand-600">

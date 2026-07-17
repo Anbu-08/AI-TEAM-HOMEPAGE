@@ -15,7 +15,7 @@ const ul = "mt-3 list-disc space-y-2 pl-5 text-[15px] leading-relaxed text-foreg
 export default function TermsOfServicePage() {
   return (
     <>
-      <LegalHero title="Terms of Service" updated="July 16, 2026" />
+      <LegalHero title="Terms of Service" updated="July 17, 2026" />
 
       <div className="mx-auto max-w-3xl px-5 py-14 sm:px-8">
         <p className={p}>
@@ -28,10 +28,11 @@ export default function TermsOfServicePage() {
 
         <h2 className={h2}>1. Description of Service</h2>
         <p className={p}>
-          {site.productName} is an AI-powered Gmail productivity assistant that helps users
-          organize emails, generate AI-powered summaries, draft professional replies, search
-          emails, and receive daily email briefings, using access granted through Google&apos;s
-          OAuth 2.0 authentication.
+          {site.productName} is an AI-powered productivity assistant that helps users
+          organize emails, generate AI-powered summaries, draft professional replies, send
+          emails when requested, search emails, receive daily email briefings, assist with
+          meeting scheduling, and suggest recipients from contacts, using access granted
+          through Google&apos;s OAuth 2.0 authentication.
         </p>
 
         <h2 className={h2}>2. Eligibility</h2>
@@ -41,12 +42,16 @@ export default function TermsOfServicePage() {
           requirements.
         </p>
 
-        <h2 className={h2}>3. Google Account &amp; Gmail Access</h2>
+        <h2 className={h2}>3. Google Account &amp; Data Access</h2>
         <p className={p}>
           Use of the Application requires you to authenticate with your Google Account and grant
-          the Gmail permission (<code>gmail.modify</code>) via Google&apos;s official OAuth
-          consent screen. This permission is used to read emails for summaries, organize inbox
-          content, and create draft replies — never to send or delete email. You may
+          permissions for Gmail, Google Calendar, and Google Contacts via Google&apos;s official
+          OAuth consent screen. These permissions are used to read and analyze emails, generate
+          AI-powered summaries, create and manage draft replies, organize inbox content, send
+          emails only when you request it, view and manage calendar events you request, and
+          suggest recipients from your contacts. The Application also uses Google Cloud
+          Pub/Sub to receive real-time Gmail notifications that keep your inbox data
+          synchronized. You may
           review, limit, or revoke this access at any time from your{" "}
           <a
             href="https://myaccount.google.com/permissions"
@@ -76,8 +81,8 @@ export default function TermsOfServicePage() {
         <p className={p}>
           Summaries, draft replies, search results, and briefings are generated using automated,
           AI-based processing and are provided for your convenience. You are solely responsible
-          for reviewing any AI-generated draft before sending it — the Application never sends
-          emails automatically or without your explicit action.
+          for reviewing any AI-generated draft before sending it — the Application sends
+          emails only when you explicitly request it, never automatically.
         </p>
 
         <h2 className={h2}>6. Intellectual Property</h2>

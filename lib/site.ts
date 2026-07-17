@@ -1,6 +1,6 @@
 export const site = {
   productName: "Personal Assistant",
-  tagline: "AI-powered Gmail Productivity Assistant",
+  tagline: "AI-Powered Gmail Productivity Assistant",
   developer: "Takshashila AI Team",
   url: "https://takshashilaai.tech",
   supportEmail: "adminintern@takshashilauniv.ac.in",
@@ -9,9 +9,10 @@ export const site = {
   signInUrl: "https://app.takshashilaai.tech/auth/google",
   navLinks: [
     { href: "#features", label: "Features" },
+    { href: "#google-services", label: "Google Services" },
     { href: "#how-it-works", label: "How It Works" },
+    { href: "#data-usage", label: "Data Usage" },
     { href: "#privacy", label: "Privacy" },
-    { href: "#permissions", label: "Permissions" },
     { href: "#about", label: "About" },
     { href: "#contact", label: "Contact" },
   ],

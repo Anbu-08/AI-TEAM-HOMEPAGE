@@ -1,16 +1,18 @@
 import Link from "next/link";
-import { Eye, Sparkles, PenLine, FolderKanban, ShieldOff, Ban, UserCheck } from "lucide-react";
+import { Eye, Sparkles, PenLine, FolderKanban, CalendarDays, Users, ShieldOff, Ban, UserCheck } from "lucide-react";
 
 const usages = [
   { icon: Eye, label: "Reading emails" },
   { icon: Sparkles, label: "Generating summaries" },
   { icon: PenLine, label: "Creating draft replies" },
   { icon: FolderKanban, label: "Organizing inbox content" },
+  { icon: CalendarDays, label: "Assisting with scheduling" },
+  { icon: Users, label: "Suggesting recipients from contacts" },
 ];
 
 const commitments = [
   { icon: Ban, label: "Never sells user data" },
-  { icon: ShieldOff, label: "Never shares Gmail data with third parties" },
+  { icon: ShieldOff, label: "Never shares Google user data with third parties" },
   { icon: UserCheck, label: "Users can revoke access anytime from their Google Account" },
 ];
 
@@ -23,9 +25,9 @@ export default function PrivacySection() {
             Your Privacy Comes First
           </h2>
           <p className="mt-5 text-base leading-relaxed text-foreground/65">
-            Personal Assistant only accesses Gmail after the user explicitly grants permission
-            through Google&apos;s OAuth process. The application only uses Gmail data to provide
-            the requested features, including:
+            Personal Assistant only accesses Gmail, Google Calendar, and Google Contacts after
+            the user explicitly grants permission through Google&apos;s OAuth process. The
+            application only uses this data to provide the requested features, including:
           </p>
 
           <ul className="mt-6 grid gap-3 sm:grid-cols-2">

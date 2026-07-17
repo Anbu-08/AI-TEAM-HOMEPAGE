@@ -1,25 +1,30 @@
-import { LogIn, ShieldCheck, ScanSearch, Sparkles } from "lucide-react";
+import { LogIn, ShieldCheck, ScanSearch, Sparkles, CalendarCheck } from "lucide-react";
 
 const steps = [
   {
     icon: LogIn,
-    title: "Sign in securely",
+    title: "Sign in",
     description: "Sign in securely with your Google Account.",
   },
   {
     icon: ShieldCheck,
-    title: "Grant permissions",
-    description: "Grant Gmail permissions through Google's OAuth consent screen.",
+    title: "Grant access",
+    description: "Grant access to Gmail, Calendar, and Contacts.",
   },
   {
     icon: ScanSearch,
-    title: "Secure analysis",
-    description: "The application analyzes your emails securely.",
+    title: "AI analysis",
+    description: "Personal Assistant analyzes emails and schedules using AI.",
   },
   {
     icon: Sparkles,
     title: "Get insights",
-    description: "Generate summaries, drafts, and insights.",
+    description: "Receive summaries, suggested replies, task extraction, and productivity insights.",
+  },
+  {
+    icon: CalendarCheck,
+    title: "Stay productive",
+    description: "Manage communications and scheduling more efficiently.",
   },
 ];
 
@@ -29,11 +34,11 @@ export default function HowItWorks() {
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
-            How It Works
+            How Personal Assistant Works
           </h2>
         </div>
 
-        <div className="relative mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="relative mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
           <div className="absolute top-6 left-0 right-0 hidden h-px bg-surface-border lg:block" aria-hidden="true" />
           {steps.map(({ icon: Icon, title, description }, index) => (
             <div key={title} className="relative flex flex-col items-center text-center">

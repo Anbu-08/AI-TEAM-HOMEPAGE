@@ -16,7 +16,7 @@ const ul = "mt-3 list-disc space-y-2 pl-5 text-[15px] leading-relaxed text-foreg
 export default function PrivacyPolicyPage() {
   return (
     <>
-      <LegalHero title="Privacy Policy" updated="July 16, 2026" />
+      <LegalHero title="Privacy Policy" updated="July 17, 2026" />
 
       <div className="mx-auto max-w-3xl px-5 py-14 sm:px-8">
         <p className={p}>
@@ -37,13 +37,26 @@ export default function PrivacyPolicyPage() {
         <h2 className={h2}>2. Information We Access</h2>
         <p className={p}>
           When you sign in with Google and grant permission, {site.productName} may access the
-          following Gmail scope, and only after you explicitly consent through Google&apos;s
-          OAuth consent screen:
+          following Google services, and only after you explicitly consent through
+          Google&apos;s OAuth consent screen:
         </p>
         <ul className={ul}>
           <li>
-            <code>gmail.modify</code> — used to read emails for summaries, organize inbox
-            content, and create draft replies — never to send or delete email.
+            <strong>Gmail</strong> — to read and analyze email messages, generate AI-powered
+            summaries, create and manage draft replies, organize inbox content, and send
+            emails on your behalf only when you request it.
+          </li>
+          <li>
+            <strong>Google Calendar</strong> — to view calendar events, assist with meeting
+            scheduling, and create and manage events when you request it.
+          </li>
+          <li>
+            <strong>Google Contacts</strong> — to access contact information to improve
+            recipient suggestions and communication workflows.
+          </li>
+          <li>
+            <strong>Google Cloud Pub/Sub</strong> — to receive real-time Gmail notifications
+            that keep your inbox data synchronized.
           </li>
         </ul>
         <p className={p}>
@@ -52,18 +65,21 @@ export default function PrivacyPolicyPage() {
         </p>
 
         <h2 className={h2}>3. How We Use Your Information</h2>
-        <p className={p}>Gmail data accessed through these scopes is used exclusively to power the features you request, including:</p>
+        <p className={p}>Google user data accessed through these services is used exclusively to power the features you request, including:</p>
         <ul className={ul}>
           <li>Reading emails to generate AI-powered summaries.</li>
           <li>Generating concise summaries of long email conversations.</li>
           <li>Creating draft replies that remain in your Drafts folder until you choose to send them.</li>
+          <li>Sending emails on your behalf, only when you explicitly request it.</li>
           <li>Organizing and categorizing inbox content to reduce clutter.</li>
           <li>Powering natural-language, AI-assisted email search.</li>
+          <li>Assisting with meeting scheduling and managing calendar events you request.</li>
+          <li>Suggesting recipients and improving communication workflows using your contacts.</li>
           <li>Compiling daily briefings of important emails and tasks.</li>
         </ul>
         <p className={p}>
-          <strong>{site.productName} never sends emails automatically</strong> — every draft is
-          created for your review and requires your explicit action to send. Gmail data is
+          <strong>{site.productName} never sends emails without your explicit request</strong> —
+          emails are sent only when you ask the Application to send them. Google user data is
           never used to serve advertisements.
         </p>
 
@@ -88,10 +104,10 @@ export default function PrivacyPolicyPage() {
         <h2 className={h2}>5. What We Do Not Do</h2>
         <ul className={ul}>
           <li>We never sell user data.</li>
-          <li>We never share Gmail data with third parties.</li>
-          <li>We never use Gmail data for advertising or ad targeting.</li>
-          <li>We never send emails on your behalf without your explicit action.</li>
-          <li>We do not use Gmail data to train generalized/non-personalized AI or machine-learning models.</li>
+          <li>We never share Google user data with third parties.</li>
+          <li>We never use Google Workspace data for advertising or ad targeting.</li>
+          <li>We never send emails on your behalf without your explicit request.</li>
+          <li>We do not use Google user data to train generalized/non-personalized AI or machine-learning models.</li>
         </ul>
 
         <h2 className={h2}>6. Data Storage &amp; Security</h2>
@@ -109,7 +125,11 @@ export default function PrivacyPolicyPage() {
           (such as cached summaries or authentication tokens) for as long as your account is
           active. You may request deletion of your data at any time by contacting us, and all
           retained data is deleted upon revocation of access or account deletion, except where
-          retention is required by law.
+          retention is required by law. See our{" "}
+          <Link href="/data-deletion" className="font-medium text-brand-600 hover:text-brand-700">
+            Data Deletion Instructions
+          </Link>{" "}
+          for step-by-step guidance.
         </p>
 
         <h2 className={h2}>8. Your Choices &amp; How to Revoke Access</h2>
